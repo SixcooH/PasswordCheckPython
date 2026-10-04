@@ -1,0 +1,1 @@
+mot_de_passe = input("Ecrivez un mot de passe")

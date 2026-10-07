@@ -1,4 +1,7 @@
+import math  # 🆕 la boîte à outils mathématiques de Python
+
 mot_de_passe = input("Entrez un mot de passe : ")
+
 
 longueur = len(mot_de_passe)
 print("Votre mot de passe contient", longueur, "caractères.")
@@ -46,3 +49,7 @@ print("Taille de l'alphabet :", taille_alphabet)
 combinaisons = taille_alphabet ** longueur
 
 print("Nombre de combinaisons possibles :", combinaisons)
+
+entropie = longueur * math.log2(taille_alphabet)
+
+print("Entropie :", round(entropie, 1), "bits")

@@ -25,3 +25,24 @@ print("Contient des minuscules :", a_minuscule)
 print("Contient des majuscules :", a_majuscule)
 print("Contient des chiffres   :", a_chiffre)
 print("Contient des symboles   :", a_symbole)
+
+
+# --- Mini-étape 3 : taille de l'alphabet ---
+
+taille_alphabet = 0
+
+if a_minuscule:
+    taille_alphabet += 26
+if a_majuscule:
+    taille_alphabet += 26
+if a_chiffre:
+    taille_alphabet += 10
+if a_symbole:
+    taille_alphabet += 33
+
+print("Taille de l'alphabet :", taille_alphabet)
+
+# Nombre total de combinaisons possibles
+combinaisons = taille_alphabet ** longueur
+
+print("Nombre de combinaisons possibles :", combinaisons)

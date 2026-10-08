@@ -60,3 +60,15 @@ print("Nombre de combinaisons possibles :", combinaisons)
 entropie = longueur * math.log2(taille_alphabet)
 
 print("Entropie :", round(entropie, 1), "bits")
+
+
+# --- Mini-étape 5 : verdict ---
+
+if entropie < 40:
+    print("Verdict : FAIBLE")
+elif entropie < 60:
+    print("Verdict : MOYEN")
+elif entropie < 80:
+    print("Verdict : FORT")
+else:
+    print("Verdict : TRÈS FORT")

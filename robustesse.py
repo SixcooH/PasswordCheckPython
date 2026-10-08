@@ -1,9 +1,16 @@
-import math  # 🆕 la boîte à outils mathématiques de Python
+import math  #la boîte à outils mathématiques de Python
+import math
+import sys
 
 mot_de_passe = input("Entrez un mot de passe : ")
 
 
 longueur = len(mot_de_passe)
+
+# Validation : on refuse un mot de passe vide (sinon log2(0) fait planter)
+if longueur == 0:
+    print("Vous n'avez rien tapé. Relancez le programme et entrez un mot de passe.")
+    sys.exit()
 print("Votre mot de passe contient", longueur, "caractères.")
 
 # On prépare 4 cases à cocher, toutes vides au départ

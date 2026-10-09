@@ -37,7 +37,6 @@ print("Contient des chiffres   :", a_chiffre)
 print("Contient des symboles   :", a_symbole)
 
 
-# --- Mini-étape 3 : taille de l'alphabet ---
 
 taille_alphabet = 0
 
@@ -61,8 +60,6 @@ entropie = longueur * math.log2(taille_alphabet)
 
 print("Entropie :", round(entropie, 1), "bits")
 
-
-# --- Mini-étape 5 : verdict ---
 
 if entropie < 40:
     print("Verdict : FAIBLE")

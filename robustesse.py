@@ -7,7 +7,7 @@ mot_de_passe = input("Entrez un mot de passe : ")
 
 longueur = len(mot_de_passe)
 
-# Validation : on refuse un mot de passe vide (sinon log2(0) fait planter)
+#Validation : on refuse un mot de passe vide (sinon log2(0) fait planter)
 if longueur == 0:
     print("Vous n'avez rien tapé. Relancez le programme et entrez un mot de passe.")
     sys.exit()
@@ -19,7 +19,7 @@ a_majuscule = False
 a_chiffre = False
 a_symbole = False
 
-# On regarde chaque caractère, un par un
+#On regarde chaque caractère, un par un
 for caractere in mot_de_passe:
     if caractere.islower():
         a_minuscule = True
@@ -30,7 +30,7 @@ for caractere in mot_de_passe:
     else:
         a_symbole = True
 
-# On affiche ce qu'on a trouvé
+#On affiche ce qu'on a trouvé
 print("Contient des minuscules :", a_minuscule)
 print("Contient des majuscules :", a_majuscule)
 print("Contient des chiffres   :", a_chiffre)
@@ -51,7 +51,7 @@ if a_symbole:
 
 print("Taille de l'alphabet :", taille_alphabet)
 
-# Nombre total de combinaisons possibles
+#Nombre total de combinaisons possibles
 combinaisons = taille_alphabet ** longueur
 
 print("Nombre de combinaisons possibles :", combinaisons)

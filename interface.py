@@ -47,10 +47,6 @@ def donner_verdict(entropie):
     else:
         return "TRÈS FORT"
 
-print(calculer_entropie("abc"))
-print(donner_verdict(14.1))
-
-
 fenetre = tk.Tk()
 fenetre.title("Vérificateur de mot de passe")
 fenetre.geometry("400x250")

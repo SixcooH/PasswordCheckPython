@@ -47,6 +47,12 @@ def donner_verdict(entropie):
     else:
         return "TRÈS FORT"
 
+def analyser():
+    mot_de_passe = champ.get()                     #Lire
+    entropie = calculer_entropie(mot_de_passe)     #Calculer
+    verdict = donner_verdict(entropie)             #Juger
+    resultat.config(text=f"Entropie : {round(entropie, 1)} bits\nVerdict : {verdict}")   #Afficher
+
 fenetre = tk.Tk()
 fenetre.title("Vérificateur de mot de passe")
 fenetre.geometry("400x250")
@@ -57,7 +63,10 @@ titre.pack(pady=10)
 champ = tk.Entry(fenetre, show="*", width=30)
 champ.pack(pady=5)
 
-bouton = tk.Button(fenetre, text="Analyser")
+bouton = tk.Button(fenetre, text="Analyser", command=analyser)   #command=analyser
 bouton.pack(pady=10)
+
+resultat = tk.Label(fenetre, text="", font=("Arial", 12))   #la zone de réponse
+resultat.pack(pady=10)                                       
 
 fenetre.mainloop()
